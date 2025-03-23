@@ -54,7 +54,7 @@ def read_data_into_list(articleId: str):
 
 model = SentenceTransformer('sentence-transformers/msmarco-distilbert-base-tas-b')
 
-# Extract the top 5 key sentences based on their importance
+# Extract the top 5 key sentences based on their importance using sentence embeddings/average similarity scores
 def extractKeySentences(articleId: str):
     """
     This function extracts the top 5 key sentences from an article by generating
