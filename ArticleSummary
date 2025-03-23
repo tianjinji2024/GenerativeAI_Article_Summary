@@ -14,7 +14,7 @@ def clean_data(text):
     # Remove unwanted symbols, new lines, and markdown characters
     text = text.replace("\n", "").replace("##", "").replace("*", "").strip()
     
-    # **Removing Hyperlinks**: Using regex to remove hyperlinks of the form [text](url) from the article.
+    # remove hyperlinks of the form [text](url) from the article.
     pattern = r'\[[^\]]+\]\(([^)]+)\)'  
     text_without_link = re.sub(pattern, '', text)  
 
