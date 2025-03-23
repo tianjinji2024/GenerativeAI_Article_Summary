@@ -8,6 +8,25 @@ This project focuses on extracting key sentences from articles and comparing the
 - **Key Sentence Extraction:** Extracts the top 5 most significant sentences from each article based on similarity.
 - **Article Comparison:** Compares two articles by identifying the most similar and the most different key sentences.
 
+## Files
+
+### 1. `DistilBert_article_summary.ipynb` (Test and Demonstration)
+This Jupyter notebook is designed for testing and demonstrating the core functionalities of the model. It includes steps for:
+- Data cleaning
+- Sentence encoding with **Sentence-Transformers**
+- Similarity calculation between sentences
+- Visualization of results
+
+
+### 2. `ArticleSummary.py` (Execution)
+The `.py` file is the main script for running the model in a production or batch processing environment. This file includes:
+- Code for loading and processing the articles
+- Key sentence extraction
+- Similarity comparison between two articles
+- Saving or displaying results
+
+This file should be executed in a Python environment (discussed below) to perform the intended tasks on any new articles or datasets.
+
 ## Installation
 
 To run the project, you need Python 3.7+ and the following dependencies:
@@ -30,7 +49,7 @@ To run the project, you need Python 3.7+ and the following dependencies:
 
    Download the dataset `renewable-energy.zip` from [this link](https://storage.googleapis.com/ds--tasks-datasets/renewable-energy.zip) and store it in the `data/renewable-energy/` directory.
 
-4. Make sure the articles (`.txt` files) are in the `data/renewable-energy/` folder.
+3. Make sure the articles (`.txt` files) are in the `data/renewable-energy/` folder.
 
 ## How to Run the Code
 
@@ -47,6 +66,7 @@ Use the `extractKeySentences(articleId: str)` function to extract the top 5 key 
 Use the `compareArticles(articleId1: str, articleId2: str)` function to compare two articles and identify the most similar and most different key sentences.
 
 ### Example of Extracting Key Sentences:
+
 ```python
 articleId = "1"  # Replace with the actual article ID
 key_sentences = extractKeySentences(articleId)
@@ -54,6 +74,7 @@ print(key_sentences)
 ```
 
 ### Example of Comparing Articles:
+
 ```python
 articleId1 = "1"  # First article ID
 articleId2 = "2"  # Second article ID
@@ -62,6 +83,7 @@ print(comparison)
 ```
 
 ### Project Explanation
+
 Data Preprocessing:
 The `clean_data(text)` function cleans the text by removing unwanted characters, hyperlinks, and sources.
 
@@ -72,15 +94,20 @@ Article Comparison:
 The `compareArticles(articleId1, articleId2) function` compares the key sentences between two articles and identifies the most similar and the most different sentences by computing cosine similarity.
 
 ### Conclusion
-The project allows for effective summarization and comparison of renewable energy-related articles, helping to analyze key insights and track thematic differences and similarities across multiple sources.
+The project allows for effective summarization and comparison of renewable energy-related articles, helping to analyze key insights and track similarities and differences  across multiple sources.
 
 ### Future Work
-Include more advanced text summarization techniques to extract more context.
+- Include more advanced text summarization techniques to extract more context.
 
-Extend article comparison to include a broader scope beyond just key sentences.
+- Extend article comparison to include a broader scope beyond just key sentences.
 
 ### License
 This project is open-source and available under the MIT License.
 
 ### Acknowledgments
-All the code in this project was written by me, but it was inspired by the reference sources listed in the code.
+All the code in this project was written by me, but it was inspired by the reference sources listed in the code and below.
+
+## References
+- **DistilBERT**: A smaller, faster version of BERT. [DistilBERT Paper](https://arxiv.org/abs/1910.01108)
+
+- **Sentence-Transformers**: The library used for sentence embeddings. [Sentence-Transformers GitHub](https://github.com/UKPLab/sentence-transformers)
