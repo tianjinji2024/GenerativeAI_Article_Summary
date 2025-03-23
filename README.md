@@ -37,7 +37,7 @@ To run the project, you need Python 3.7+ and the following dependencies:
 - NumPy
 - Regex
 
-### Steps to Install:
+## Steps to Install:
 
 1. Install dependencies:
    ```bash
@@ -82,7 +82,7 @@ comparison = compareArticles(articleId1, articleId2)
 print(comparison)
 ```
 
-### Project Explanation
+## Project Explanation
 
 Data Preprocessing:
 The `clean_data(text)` function cleans the text by removing unwanted characters, hyperlinks, and sources.
@@ -93,18 +93,18 @@ The `extractKeySentences(articleId)` function reads the cleaned data and generat
 Article Comparison:
 The `compareArticles(articleId1, articleId2) function` compares the key sentences between two articles and identifies the most similar and the most different sentences by computing cosine similarity.
 
-### Conclusion
+## Conclusion
 The project allows for effective summarization and comparison of renewable energy-related articles, helping to analyze key insights and track similarities and differences  across multiple sources.
 
-### Future Work
+## Future Work
 - Include more advanced text summarization techniques to extract more context.
 
 - Extend article comparison to include a broader scope beyond just key sentences.
 
-### License
+## License
 This project is open-source and available under the MIT License.
 
-### Acknowledgments
+## Acknowledgments
 All the code in this project was written by me, but it was inspired by the reference sources listed in the code and below.
 
 ## References
