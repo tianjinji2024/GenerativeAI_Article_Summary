@@ -47,9 +47,8 @@ def read_data_into_list(articleId: str):
 # DistilBERT is a distilled version of BERT (Bidirectional Encoder Representations from Transformers).
 # It retains 97% of BERT's performance while being 60% faster and smaller, making it ideal for tasks
 # requiring efficient computation and fast inference, such as extracting key sentences from text.
-# By using the 'msmarco-distilbert-base-tas-b' model, we're leveraging a version of DistilBERT fine-tuned
-# for the task of ranking sentences based on relevance, which is critical for sentence extraction tasks like ours.
-# For more on DistilBERT and SentenceTransformers, visit:
+# By using the 'msmarco-distilbert-base-tas-b' model, we're leveraging a version of DistilBERT fine-tuned model sentence transformer model
+# Reference: 
 # [DistilBERT Paper](https://arxiv.org/abs/1910.01108)
 # [Sentence-Transformers GitHub](https://github.com/UKPLab/sentence-transformers)
 
